@@ -1,0 +1,26 @@
+<section id="create-container">
+    <div class="create-container-info">
+        <h1>Create Volcano Wiki</h1>
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" id="name" name="name" value="{{volcano.name}}" placeholder="...">
+            <label>Location:</label>
+            <input type="text" id="location" name="location" value="{{volcano.location}}" placeholder="...">
+            <label>Elevation:</label>
+            <input type="number" id="elevations" name="elevation" value="{{volcano.elevation}}" placeholder="...">
+            <label>Year of Last Eruption:</label>
+            <input type="number" id="last-year-eruption" name="year" value="{{volcano.year}}" placeholder="...">
+            <label>Image:</label>
+            <input type="text" id="image" name="imageUrl" value="{{volcano.imageUrl}}" placeholder="http://...">
+            <label>Volcano Type:</label>
+            <select id="type" name="volcanoType">
+                {{#each volcanoTypes}}
+                <option value="{{value}}" {{selected}}>{{label}}</option>
+                {{/each}}
+            </select>
+            <label>Description:</label>
+            <textarea id="description" name="description" placeholder="...">{{volcano.description}}</textarea>
+            <input type="submit" id="btn" value="Submit"></input>
+        </form>
+    </div>
+</section>
